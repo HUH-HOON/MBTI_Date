@@ -6,12 +6,47 @@
 -->
 <html>
 	<head>
-		<title>Astral by HTML5 UP</title>
+		<title>Find your date with MBTI</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
+	<style>
+		.aa{
+			background-color : #E7E7E7;
+			border-style: none;
+			border-radius: 20px;
+			width : 200px;
+			height:50px;
+		}
+		.btn{
+			background-color: #E5AE9D;
+			border-radius: 10px;
+			border-style: none;
+			width:120px;
+			height:40px;
+			font-size: large;	
+			font-weight: bold;
+			margin-left:360px;
+		}
+		.btn1{
+			background-color: #E5AE9D;
+			border-radius: 10px;
+			border-style: none;
+			width:120px;
+			height:40px;
+			font-size: large;	
+			font-weight: bold;
+				}
+		.btn:hover{
+			background-color: #D5D5D5;
+		}
+		.btn1:hover{
+			background-color: #D5D5D5;
+		}
+		
+	</style>
 	<body class="is-preload">
 
 		<!-- Wrapper-->
@@ -22,7 +57,7 @@
 					<a href="#" class="icon solid fa-home"><span>Home</span></a><!--홈-->
 					<a href="#work" class="icon solid fa-info-circle"><span>MBTI란?</span></a><!--mbti(3)-->
 					<a href="#" class="icon solid fa-user"><span>MY MBTI</span></a><!--내 mbti-->					
-					<a href="#" class="icon solid fa-heartbeat"><span>FIND DATE</span></a><!--소개팅(2)-->		
+					<a href="../mbti_date/dating/dating-main.html" class="icon solid fa-heartbeat"><span>FIND DATE</span></a><!--소개팅(2)-->		
 					<a href="#contact" class="icon solid fa-gamepad"><span>Mㅏ피아</span></a><!--추리게임(3)-->
 				</nav>
 
@@ -32,17 +67,17 @@
 						<!-- Me -->
 							<article id="home" class="panel intro">
 								<header>
-									<h1>Jane Doe</h1>
-									<p>Senior Astral Projectionist</p>
-									<form>
-										aaaID : <input id="userid" type="text"><br>
-										비밀번호 : <input id="pwd" type="password" maxlength="5">
+									<br>MBTI를 통해 나에게 꼭 맞는 연인을 찾아보세요<br><br>
+									<form action="">
+									 ID&nbsp;&nbsp;&nbsp;<input id="userid" type="text" class="aa" required>
+									 PASSWORD <input id="pwd" type="password" class="aa" required><br>
 									</form>
-									<button type="button" class="navyBtn" onclick="location.href='INTJ-A.html'">로그인</button>
-									<button type="button" class="navyBtn" onclick="location.href='SignUp.html'">회원가입</button>
+									<button class="btn" onclick="location.href='INTJ-A.html'">log in</button>
+									<button class="btn1" onclick="location.href='SignUp.html'">sign up</button>
+								
 								</header>
-								<a href="#work" class="jumplink pic">
-									<span class="arrow icon solid fa-chevron-right"><span>See my work</span></span>
+								<a href="" class="jumplink pic">
+									
 									<img src="images/dating.jpg" alt="" />
 								</a>
 
@@ -146,14 +181,6 @@
 
 
 
-				<!-- Footer -->
-					<div id="footer">
-						<ul class="copyright">
-							<li>&copy; Untitled.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-						</ul>
-					</div>
-
-			</div>
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
