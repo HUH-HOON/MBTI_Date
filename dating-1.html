@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
+		<link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Yeon+Sung&display=swap" rel="stylesheet">
 		<title>Find your date with MBTI</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -8,18 +9,20 @@
 		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
 	</head>
 	<style>
-	
-		.btn{
-			background-color: #E5AE9D;
-			border-radius: 10px;
-			border-style: none;
-			width:120px;
-			height:40px;
-			font-size: large;	
-			font-weight: bold;
+		#nn{font-family: 'Do Hyeon', sans-serif;font-family: 'Yeon Sung', cursive;}
+		.answer{
+			background: none;
+			background-color: none;
+			color: #E5AE9D;
+			font-size: large;
 		}
+		.answer:hover{
+			
+			background-color: #E5AE9D;
+			color: white;
+			}
 	</style>
-	<body class="is-preload">
+	<body class="is-preload" id="nn">
 
 		<!-- Wrapper-->
 			<div id="wrapper">
@@ -29,9 +32,9 @@
 							<article id="home" class="panel intro">
                                <header>
                                     <center>    
-                                        "000"님에게 가장 잘 어울리는 상대의 MBTI는 000, 000입니다. 소개 받으시겠습니까?<br><br>
-                                        <input type="button" value="YES" onclick="location.href='yes.html'">
-                                        <input type="button" value="NO" onclick="location.href='../cccc.html'">
+                                        <b>"박기민"</b>님에게 가장 잘 어울리는 상대의 MBTI는 ENTJ입니다. <br>소개 받으시겠습니까?<br><br>
+                                        <button class="answer" onclick="location.href='yes.html'">YES</button>
+                                        <button class="answer" onclick="location.href='dating-2.html'">NO</button>
                                     </center>
                                 </header>
 							</article>
