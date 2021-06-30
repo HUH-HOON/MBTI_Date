@@ -1,29 +1,59 @@
 const http = require('http');
 const fs = require('fs').promises;
+const express = require('express');
+const morgan = require('morgan');
+const cookieParser = require('cookie-parser');
+const session = require('express-session');
+const dotenv = require('dotenv');
+const path = require('path');
 
-http.createServer (async (req, res) =>{
-  try { 
-      if(req.url=="/")  {
-        const data =  await fs.readFile('./public/html/index.html');
-        res.writeHead (200, { 'Content-Type': 'text/html; charset=utf-8' });
-        return res.end (data); 
-      } 
-      try {
-        const data = await fs.readFile(`.${req.url}`);
-        return res.end(data);
-      } 
-      catch (err) {
-        // 주소에 해당하는 라우트를 못 찾았다는 404 Not Found error 발생 
-          return res.end();
-      }
-        
-  } catch (err) {
-    console.error(err);
-    res.writeHead(500, { 'Content-Type': 'text/plain; charset=utf-8' });
-    res.end(err.message);
-    }
-  }
-)
-  .listen(8080, () => {
-    console.log('8080번 포트에서 서버 대기 중입니다');
-  });
+dotenv.config();
+const loginRouter = require('./route/login');
+const loginProcessRouter = require('./route/loginProcess');
+const signupRouter = require('./route/signup');
+const signupProcessRouter = require('./route/signupProcess');
+const app = express();
+
+app.get('/', (req, res) => {
+  res.sendFile('./public/html/index.html', {root:__dirname });
+});
+
+app.use('/static', express.static(__dirname + '/public/'));
+
+app.set('port', process.env.PORT || 3000);
+
+app.use(morgan('dev')); 
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser(process.env.COOKIE_SECRET));
+app.use(session({
+  resave: false,
+  saveUninitialized: false,
+  secret: process.env.COOKIE_SECRET,
+  cookie: {
+    httpOnly: true,
+    secure: false,
+  },
+  name: 'session-cookie',
+}));
+
+app.use('./route/login', loginRouter);
+app.use('./route/loginProcess', loginProcessRouter);
+app.use('./route/signup', signupRouter);
+app.use('./route/signupProcess', signupProcessRouter);
+
+app.use((req, res, next) => {
+  res.status(404).send('Not Found');
+});
+
+app.use((err, req, res, next) => {
+  console.error(err);
+  res.status(500).send(err.message);
+});
+
+app.set('view engine','ejs');
+app.set('views','./views_ejs');
+
+app.listen(app.get('port'), () => {
+  console.log(app.get('port'), '번 포트에서 대기 중');
+});
