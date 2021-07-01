@@ -8,12 +8,16 @@ const dotenv = require('dotenv');
 const path = require('path');
 
 dotenv.config();
+const profile2Router = require('./route/profile2');
+const profile2ProcessRouter = require('./route/profile2Process');
 const dateMainRouter = require('./route/dateMain');
 const dateMainProcessRouter = require('./route/dateMainProcess');
 const loginRouter = require('./route/login');
 const loginProcessRouter = require('./route/loginProcess');
 const signupRouter = require('./route/signup');
 const signupProcessRouter = require('./route/signupProcess');
+const profile1Router = require('./route/profile1');
+const profile1ProcessRouter = require('./route/profile1Process');
 const app = express();
 
 app.get('/', (req, res) => {
@@ -45,6 +49,11 @@ app.use('/route/login', loginRouter);
 app.use('/route/loginProcess', loginProcessRouter);
 app.use('/route/signup', signupRouter);
 app.use('/route/signupProcess', signupProcessRouter);
+app.use('/route/profile1', profile1Router);
+app.use('/route/profile1Process', profile1ProcessRouter);
+app.use('/route/profile2',profile2Router);
+app.use('/route/profile2Process',profile2ProcessRouter);
+
 
 app.use((req, res, next) => {
   res.status(404).send('Not Found');

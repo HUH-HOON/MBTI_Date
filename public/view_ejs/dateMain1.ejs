@@ -33,8 +33,11 @@
                                <header>
                                     <center>    
                                         <b><%= name %></b>님에게 가장 잘 어울리는 상대의 MBTI는 <%= mbti %>입니다. <br>소개 받으시겠습니까?<br><br>
-                                        <button class="answer" onclick="location.href='./yes.html'">YES</button>
-                                        <button class="answer" onclick="location.href='./dating-2.html'">NO</button>
+                                        <form action="/route/profile1Process" method="post">
+											<td>
+												<button class="answer" id="nn">yes</button>
+											</td></form>
+                                        <button class="answer" onclick="location.href='http://127.0.0.1:3000/static/html/dating-2.html'">NO</button>
                                     </center>
                                 </header>
 							</article>
