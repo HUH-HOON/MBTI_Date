@@ -20,6 +20,7 @@
             <!-- content-->
             <div id="content">
 
+                <form action="/route/signupProcess" method="post">
                 <!-- ID -->
                 <div>
                     <h3 class="join_title">
@@ -67,7 +68,7 @@
                     <h3 class="join_title"><label for="gender">성별</label></h3>
                     <span class="box gender_code">
                         <!-- <input type="text" name="gender" class="int" maxlength="20"> -->
-                        <select id="gender" class="sel">
+                        <select name="gender" class="sel">
                             <option>성별</option>
                             <option value="M" name="m">남자</option>
                             <option value="F" name="f">여자</option>
@@ -97,16 +98,17 @@
 
                 <!-- JOIN BTN-->
                 <div class="btn_area">
-                    <button id="btnJoin" onclick="location.href='http://127.0.0.1:8080/signupProcess'">
+                    <button type="submit" id="btnJoin">
                         <span>submit</span>
                     </button>
-                </div>               
+                </div>      
+                </form>           
 
             </div> 
             <!-- content-->
 
         </div> 
         <!-- wrapper -->
-    <script src="main.js"></script>
+    
     </body>
 </html>

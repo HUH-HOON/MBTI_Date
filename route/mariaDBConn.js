@@ -5,7 +5,7 @@ const pool = mariadb.createPool({
     port: vals.DBPort,
     user: vals.DBUser,
     password: vals.DBPass,
-    connectionLimit: 5 });
+    connectionLimit: 10 });
 
 async function GetUserList(){ 
         let conn, rows; 
@@ -27,25 +27,21 @@ async function GetUserList(){
             try{ 
                 conn = await pool.getConnection(); 
                 conn.query('USE date_user'); 
-                console.log("userid ", userid);
-                var result = 
-                 await conn.query(`insert into users (User_id, User_pw, User_name, User_age, User_gender, User_mbti, User_phone) values ('${Userid}','${Userpw}','${Username}', '${Userage}', '${Usergender}', '${Usermbti}', '${Userphone}'  )`);
-    
+                await conn.query(`insert into user values ('${Userid}','${Userpw}','${Username}', '${Userage}', '${Usergender}', '${Usermbti}', '${Userphone}'  )`);
             } catch(err){ 
                 throw err; 
             } finally{  
                 if (conn) 
-                    conn.end(); 
-                    return result; 
+                    conn.end();
                 } 
             }  
-            async function GetUser(userid){ 
+            async function GetUser(Userid){ 
                 let conn, rows; 
                 try{ 
                     conn = await pool.getConnection(); 
                     conn.query('USE date_user'); 
-                    console.log("userid ", userid);
-                    rows = await conn.query(` SELECT * FROM users where user_id='${userid}'`);
+                    console.log("userid ", Userid);
+                    rows = await conn.query(` SELECT * FROM user where User_id='${Userid}'`);
         
                 } catch(err){ 
                     throw err; 

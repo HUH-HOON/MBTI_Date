@@ -5,9 +5,9 @@
         <title>MBTI DATE</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-        <link rel="stylesheet" href="static/assets/css/main.css" />
+        <link rel="stylesheet" href="/static/assets/css/main.css" />
         <noscript>
-            <link rel="stylesheet" href="static/assets/css/noscript.css" />
+            <link rel="stylesheet" href="/static/assets/css/noscript.css" />
         </noscript>
         <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Yeon+Sung&display=swap" rel="stylesheet">
         <style>
@@ -30,12 +30,14 @@
                 background: none;
                 border-radius: 10px;
                 border-style: none;
-                width: 120px;
+                width: 140px;
                 height: initial;
-                font-size: large;
+                font-size: 23px;
                 color: #E5AE9D;
-                margin-left: 180px;
+                margin-left: 270px;
+                margin-top : 50px;
                 font-family: Hanna;
+                
             }
 
             .btn1 {
@@ -43,11 +45,11 @@
                 background: none;
                 border-radius: 10px;
                 border-style: none;
-                width: 120px;
+                width: 150px;
                 height: initial;
                 color: #E5AE9D;
 
-                font-size: large;
+                font-size: 23px;
                 font-family: Hanna;
             }
 
@@ -108,17 +110,18 @@
                 <article id="home" class="panel intro">
                     <header>
                         <br>
-                        <center><img src="static/image/minii.png">MBTI를 통해 나에게 꼭 맞는 연인을 찾아보세요<img src="static/image/minii.png">
+                        <center><img src="/static/image/minii.png">MBTI를 통해 나에게 꼭 맞는 연인을 찾아보세요<img src="/static/image/minii.png">
                         </center><br>
-                        <form action="">
-                            ID&nbsp;&nbsp;&nbsp;<input id="userid" type="text" class="aa" required>
-                            PASSWORD <input id="pwd" type="password" class="aa" required><br>
-                        </form>
-                        <button class="btn" onclick="location.href='INTJ-A.html'">log in</button>
-                        <button class="btn1" onclick="location.href='static/html/SignUp.html'">sign up</button>
+                        <form action="/route/loginProcess" method = "post">
+                            ID&nbsp;&nbsp;&nbsp;<input name="id" type="text" class="aa" required>
+                            PASSWORD <input name="pw" type="password" class="aa" required><br>
+                        
+                        <button class="btn" >log in</button>
+                       
+                    </form> <button class="btn1" onclick="location.href='static/html/SignUp.html'">sign up</button>
                     </header>
                     <a href="#" class="jumplink pic">
-                        <img src="static/image/dating.jpg" alt="" style="width: 440px;height: auto;" />
+                        <img src="/static/image/dating.jpg" alt="" style="width: 440px;height: auto;" />
                     </a>
                 </article>
 
@@ -143,7 +146,7 @@
                                 <div class="row">
                                     <td>
                                         <div class="col-4 col-6-medium col-12-small">
-                                            <a href="static/html/INTJ-A-T01.html" class="image fit"><img 
+                                            <a href="http://127.0.0.1:3000/static/html/INTJ-A-T01.html" class="image fit"><img 
                                                     src="/static/image/INTJ.jpg" alt="" width="50%"
                                                     height="50%"></a>
                                             <p><strong>용의주도한 전략가</strong><br>
@@ -152,8 +155,8 @@
                                     </td>
                                     <td>
                                         <div class="col-4 col-6-medium col-12-small">
-                                            <a href="static/html/INTP-A-T02.html" class="image fit"><img
-                                                    src="static/image/INTP.jpg" alt="" width="50%"
+                                            <a href="http://127.0.0.1:3000/static/html/INTP-A-T02.html" class="image fit"><img
+                                                    src="/static/image/INTP.jpg" alt="" width="50%"
                                                     height="50%"></a>
                                             <p><strong>논리적인 사색가</strong><BR>
                                                 INTP-A / INTP-T </p>
@@ -161,8 +164,8 @@
                                     </td>
                                     <td>
                                         <div class="col-4 col-6-medium col-12-small">
-                                            <a href="static/html/ENTJ-A-T03.html" class="image fit"><img
-                                                    src="static/image/ENTJ.jpg" alt="" width="50%"
+                                            <a href="http://127.0.0.1:3000/static/html/ENTJ-A-T03.html" class="image fit"><img
+                                                    src="/static/image/ENTJ.jpg" alt="" width="50%"
                                                     height="50%"></a>
                                             <p><strong>대담한 통솔자</strong><br>
                                                 ENTJ-A / ENTJ-T </p>
@@ -170,8 +173,8 @@
                                     </td>
                                     <td>
                                         <div class="col-4 col-6-medium col-12-small">
-                                            <a href="static/html/ENTP-A-T04.html" class="image fit"><img
-                                                    src="static/image/ENTP.jpg" alt="" width="50%"
+                                            <a href="http://127.0.0.1:3000/static/html/ENTP-A-T04.html" class="image fit"><img
+                                                    src="/static/image/ENTP.jpg" alt="" width="50%"
                                                     height="50%"></a>
                                             <p><strong>뜨거운 논쟁을 즐기는 변론가</strong><br>
                                                 ENTP-A / ENTP-T </p>
@@ -191,8 +194,8 @@
                             <tr>
                                 <td>
                                     <div class="col-4 col-6-medium col-12-small">
-                                        <a href="static/html/INFJ-A-T05.html" class="image fit"><img
-                                                src="static/image/INFJ.jpg" alt="" width="50%"
+                                        <a href="http://127.0.0.1:3000/static/html/INFJ-A-T05.html" class="image fit"><img
+                                                src="/static/image/INFJ.jpg" alt="" width="50%"
                                                 height="50%"></a>
                                         <p><strong>선의의 옹호자</strong><br>
                                             INFJ-A / INFJ-T </p>
@@ -200,8 +203,8 @@
                                 </td>
                                 <td>
                                     <div class="col-4 col-6-medium col-12-small">
-                                        <a href="static/html/INFP-A-T06.html" class="image fit"><img
-                                                src="static/image/INFP.jpg" alt="" width="50%"
+                                        <a href="http://127.0.0.1:3000/static/html/INFP-A-T06.html" class="image fit"><img
+                                                src="/static/image/INFP.jpg" alt="" width="50%"
                                                 height="50%"></a>
                                         <p><strong>열정적인 중재자</strong><br>
                                             INFP-A /INFP-T </p>
@@ -209,8 +212,8 @@
                                 </td>
                                 <td>
                                     <div class="col-4 col-6-medium col-12-small">
-                                        <a href="static/html/ENFJ-A-T07.html" class="image fit"><img
-                                                src="static/image/ENFJ.jpg" alt="" width="50%"
+                                        <a href="http://127.0.0.1:3000/static/html/ENFJ-A-T07.html" class="image fit"><img
+                                                src="/static/image/ENFJ.jpg" alt="" width="50%"
                                                 height="50%"></a>
                                         <p><strong>정의로운 사회운동가</strong><br>
                                             ENFJ-A / ENFJ-T </p>
@@ -218,8 +221,8 @@
                                 </td>
                                 <td>
                                     <div class="col-4 col-6-medium col-12-small">
-                                        <a href="static/html/ENFP-A-T08.html" class="image fit"><img
-                                                src="static/image/ENFP.jpg" alt="" width="50%"
+                                        <a href="http://127.0.0.1:3000/static/html/ENFP-A-T08.html" class="image fit"><img
+                                                src="/static/image/ENFP.jpg" alt="" width="50%"
                                                 height="50%"></a>
                                         <p><strong>재기발랄한 활동가</strong><br>
                                             ENFP-A / ENFP-T </p>
@@ -239,8 +242,8 @@
                             <tr>
                                 <td>
                                     <div class="col-4 col-6-medium col-12-small">
-                                        <a href="static/html/ISTJ-A-T09.html" class="image fit"><img
-                                                src="static/image/ISTJ.jpg" alt="" width="50%"
+                                        <a href="http://127.0.0.1:3000/static/html/ISTJ-A-T09.html" class="image fit"><img
+                                                src="/static/image/ISTJ.jpg" alt="" width="50%"
                                                 height="50%"></a>
                                         <p><strong>청렴결백한 논리주의자</strong><br>
                                             ISTJ-A / ISTJ-T </p>
@@ -248,8 +251,8 @@
                                 </td>
                                 <td>
                                     <div class="col-4 col-6-medium col-12-small">
-                                        <a href="static/html/ISFJ-A-T10.html" class="image fit"><img
-                                                src="static/image/ISFJ.jpg" alt="" width="50%"
+                                        <a href="http://127.0.0.1:3000/static/html/ISFJ-A-T10.html" class="image fit"><img
+                                                src="/static/image/ISFJ.jpg" alt="" width="50%"
                                                 height="50%"></a>
                                         <p><strong>용감한 수호자</strong><br>
                                             ISFJ-A / ISFJ-T </p>
@@ -257,8 +260,8 @@
                                 </td>
                                 <td>
                                     <div class="col-4 col-6-medium col-12-small">
-                                        <a href="static/html/ESTJ-A-T11.html" class="image fit"><img
-                                                src="static/image/ESTJ.jpg" alt="" width="50%"
+                                        <a href="http://127.0.0.1:3000/static/html/ESTJ-A-T11.html" class="image fit"><img
+                                                src="/static/image/ESTJ.jpg" alt="" width="50%"
                                                 height="50%"></a>
                                         <p><strong>엄격한 관리자</strong><br>
                                             ESTJ-A / ESTJ-T </p>
@@ -266,8 +269,8 @@
                                 </td>
                                 <td>
                                     <div class="col-4 col-6-medium col-12-small">
-                                        <a href="static/html/ESFJ-A-T12.html" class="image fit"><img
-                                                src="static/image/ESFJ.jpg" alt="" width="50%"
+                                        <a href="http://127.0.0.1:3000/static/html/ESFJ-A-T12.html" class="image fit"><img
+                                                src="/static/image/ESFJ.jpg" alt="" width="50%"
                                                 height="50%"></a>
                                         <p><strong>사교적인 외교관</strong><br>
                                             ESFJ-A / ESFJ-T </p>
@@ -286,8 +289,8 @@
                             <tr>
                                 <td>
                                     <div class="col-4 col-6-medium col-12-small">
-                                        <a href="static/html/ISTP-A-T13.html" class="image fit"><img
-                                                src="static/image/ISTP.jpg" alt="" width="50%"
+                                        <a href="http://127.0.0.1:3000/static/html/ISTP-A-T13.html" class="image fit"><img
+                                                src="/static/image/ISTP.jpg" alt="" width="50%"
                                                 height="50%"></a>
                                         <p><strong>만능 재주꾼</strong><br>
                                             ISTP-A / ISTP-T </p>
@@ -295,8 +298,8 @@
                                 </td>
                                 <td>
                                     <div class="col-4 col-6-medium col-12-small">
-                                        <a href="static/html/ISFP-A-T14.html" class="image fit"><img
-                                                src="static/image/ISFP.jpg" alt="" width="50%"
+                                        <a href="http://127.0.0.1:3000/static/html/ISFP-A-T14.html" class="image fit"><img
+                                                src="/static/image/ISFP.jpg" alt="" width="50%"
                                                 height="50%"></a>
                                         <p><strong>호기심 많은 예술가</strong><br>
                                             ISFP-A / ISFP-T </p>
@@ -304,8 +307,8 @@
                                 </td>
                                 <td>
                                     <div class="col-4 col-6-medium col-12-small">
-                                        <a href="static/html/ESTP-A-T15.html" class="image fit"><img
-                                                src="static/image/ESTP.jpg" alt="" width="50%"
+                                        <a href="http://127.0.0.1:3000/static/html/ESTP-A-T15.html" class="image fit"><img
+                                                src="/static/image/ESTP.jpg" alt="" width="50%"
                                                 height="50%"></a>
                                         <p><strong>모험을 즐기는 사업가</strong><br>
                                             ESTP-A / ESTP-T </p>
@@ -313,8 +316,8 @@
                                 </td>
                                 <td>
                                     <div class="col-4 col-6-medium col-12-small">
-                                        <a href="static/html/ESFP-A-T16.html" class="image fit"><img
-                                                src="static/image/ESFP.jpg" alt="" width="50%"
+                                        <a href="http://127.0.0.1:3000/static/html/ESFP-A-T16.html" class="image fit"><img
+                                                src="/static/image/ESFP.jpg" alt="" width="50%"
                                                 height="50%"></a>
                                         <p><strong>자유로운 영혼의 연예인</strong><br>
                                             ESFP-A / ESFP-T </p>
@@ -357,7 +360,7 @@
                     <tr align="center">
                         <td>
                             <div style="text-align : center;">
-                                <img src="static/image/ENFP.jpg" alt="ENFP" width="75%" title="ENFP">
+                                <img src="/static/image/ENFP.jpg" alt="ENFP" width="75%" title="ENFP">
                             </div>
                             <p><strong>ENFP</strong>
                                 <br>강력추천
@@ -365,20 +368,20 @@
                         </td>
                         <td>
                             <div style="text-align: center;">
-                                <img src="static/image/ENTP.jpg" alt="ENTP" width="75%" title="ENTP">
+                                <img src="/static/image/ENTP.jpg" alt="ENTP" width="75%" title="ENTP">
                             </div>
                             <p><strong>ENTP</strong>
                                 <br>추천
                             </p>
                         </td>
                         <td>
-                            <img src="static/image/ISFP.jpg" alt="ISFP" width="75%" title="ISFP">
+                            <img src="/static/image/ISFP.jpg" alt="ISFP" width="75%" title="ISFP">
                             <p><strong>ISFP</strong>
                                 <br>조심
                             </p>
                         </td>
                         <td>
-                            <img src="static/image/ESFP.jpg" alt="ESFP" width="75%" title="ESFP">
+                            <img src="/static/image/ESFP.jpg" alt="ESFP" width="75%" title="ESFP">
                             <p><strong>ESFP</strong>
                                 <br>최악
                             </p>
@@ -393,10 +396,10 @@
                 <table>
                     <tr>
                         <td>
-                            <center><img src="static/image/heart.PNG"></center>
+                            <center><img src="/static/image/heart.PNG"></center>
                         </td>
                         <td>
-                            <center><img src="static/image/heart.PNG"></center>
+                            <center><img src="/static/image/heart.PNG"></center>
                         </td>
                     </tr>
                     <tr>
@@ -415,12 +418,12 @@
 
 
         <!-- Scripts -->
-        <script src="static/assets/js/jquery.min.js"></script>
-        <script src="static/assets/js/browser.min.js"></script>
-        <script src="static/assets/js/breakpoints.min.js"></script>
-        <script src="static/assets/js/util.js"></script>
-        <script src="static/assets/js/main.js"></script>
-        <script src="static/assets/js/inner.js"></script>
+        <script src="/static/assets/js/jquery.min.js"></script>
+        <script src="/static/assets/js/browser.min.js"></script>
+        <script src="/static/assets/js/breakpoints.min.js"></script>
+        <script src="/static/assets/js/util.js"></script>
+        <script src="/static/assets/js/main.js"></script>
+        <script src="/static/assets/js/inner.js"></script>
 
     </body>
 

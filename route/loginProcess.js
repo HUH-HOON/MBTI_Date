@@ -9,16 +9,21 @@ router.post('/', (req, res) => {
   let  id  = req.body['id'] // POST 방식 요청이면  req.body[".."] 로 
   let  pw  = req.body['pw'] // POST 방식 요청이면  req.body[".."] 로 
  
-  mdbConn.getUser( id ).then((row)=>{
-     if (pw == row[0].user_pw ){
-         req.session.loginuser = row[0].user_name; 
-         res.render("main", {userid : req.session.loginuser})
-     }else{ 
-         res.send("로그인 실패. 다시 로그인하세요.")
-     }
-  });
-   
-
+  mdbConn.getUser(id).then((rows) => {
+    console.log( rows ) ;
+    if( !isNaN(rows)){
+         res.send(" 로그인 실패 계정 없음")
+    }
+    else if(pw==rows[0].User_pw){
+      // if(!req.session.loginuser){
+        req.session.loginuser = rows[0].User_name;
+      // }
+      res.render('main',{userid:req.session.loginuser});
+    }else{
+      console.log(pw,  rows[0].User_pw)
+      res.send("로그인실패 패스워드 틀림");
+    }
+  })
 }); 
 
 module.exports = router;

@@ -8,10 +8,14 @@ const router = express.Router();
 router.post('/', (req, res) => {  
   let  id  = req.body['id'] // POST 방식 요청이면  req.body[".."] 로 
   let  pw  = req.body['pw'] // POST 방식 요청이면  req.body[".."] 로 
-  let  name  = req.body['name'] // POST 방식 요청이면  req.body[".."] 로 
+  let  name  = req.body['name'] // POST 방식 요청이면  req.body[".."] 로
+  let  age  = req.body['age']
+  let  gender  = req.body['gender']
+  let  mbti  = req.body['mbti']
+  let  phone  = req.body['phoneno'] 
  
-  mdbConn.addUser( id, pw, name ).then((result)=>{ 
-         res.send("회원가입 성공하였습니다. <a href=/login > 로그인하세요.</a>")
+  mdbConn.addUser( id, pw, name, age, gender, mbti, phone ).then(()=>{ 
+    res.sendFile(path.join(__dirname, '../public/html/index.html')); 
      }
    );
 });
