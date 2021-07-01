@@ -112,7 +112,7 @@
                         <br>
                         <center><img src="/static/image/minii.png">MBTI를 통해 나에게 꼭 맞는 연인을 찾아보세요<img src="/static/image/minii.png">
                         </center><br>
-                        <center><img src="/static/image/minii.png"><%= userid %>님 안녕하세요.<img src="/static/image/minii.png">
+                        <center><img src="/static/image/minii.png"><%= name %>님<%= mbti %> 안녕하세요.<img src="/static/image/minii.png">
                         </center><br>
                         <center><button class="btn1" onclick="location.href='http://127.0.0.1:3000/#home'">log out</button></center>
                     </header>
@@ -355,11 +355,12 @@
                     </tr>
                     <tr align="center">
                         <td>
+                           
                             <div style="text-align : center;">
                                 <img src="/static/image/ENFP.jpg" alt="ENFP" width="75%" title="ENFP">
                             </div>
                             <p><strong>ENFP</strong>
-                                <br>강력추천
+                                <br>강력추천 <%= name %>
                             </p>
                         </td>
                         <td>
@@ -388,7 +389,7 @@
 
             <!-- DATE1 -->
             <article id="date1" class="panel intro">
-                <header>박기민님, <br>데이터 기반 자동 추천 받으시겠습니까?<br>본인이 원하는 MBTI를 직접 입력하시겠습니까?</header>
+                <header><%= name %>님,  <br>데이터 기반 자동 추천 받으시겠습니까?<br>본인이 원하는 MBTI를 직접 입력하시겠습니까?</header>
                 <table>
                     <tr>
                         <td>
@@ -398,9 +399,12 @@
                             <center><img src="/static/image/heart.PNG"></center>
                         </td>
                     </tr>
-                    <tr>
-                        <td><button class="datingbtn1" id="nn" onclick="location.href='static/html/dating-1.html'">자동추천</button>
+                    <tr><form action="/route/dateMainProcess" method="post">
+                        <td>
+                            <button class="datingbtn1" id="nn">자동추천</button>
                         </td>
+                    </form>
+                    
                         <td><button class="datingbtn1" id="nn" style="margin-left: 20px; margin-right: 10px;"
                                 onclick="location.href='static/html/dating-2.html'">MBTI 직접입력</button></td>
                     </tr>
@@ -420,6 +424,7 @@
         <script src="/static/assets/js/util.js"></script>
         <script src="/static/assets/js/main.js"></script>
         <script src="/static/assets/js/inner.js"></script>
+        
 
     </body>
 

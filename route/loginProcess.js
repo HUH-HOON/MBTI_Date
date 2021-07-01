@@ -15,10 +15,17 @@ router.post('/', (req, res) => {
          res.send(" 로그인 실패 계정 없음")
     }
     else if(pw==rows[0].User_pw){
-      // if(!req.session.loginuser){
-        req.session.loginuser = rows[0].User_name;
-      // }
-      res.render('main',{userid:req.session.loginuser});
+ 
+        req.session.name = rows[0].User_name;
+        req.session.id = rows[0].User_id; 
+        req.session.mbti = rows[0].User_mbti;
+        req.session.gender = rows[0].User_gender;
+        req.session.age = rows[0].User_age;
+        req.session.phone=rows[0].User_phone;
+        req.session.pw=rows[0].User_pw;
+        
+   
+      res.render('main',{name:req.session.name, id:req.session.id, mbti:req.session.mbti, gender:req.session.gender, age:req.session.age, phone:req.sessionphone, pw:req.session.pw});
     }else{
       console.log(pw,  rows[0].User_pw)
       res.send("로그인실패 패스워드 틀림");
