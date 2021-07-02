@@ -18,8 +18,8 @@ router.post('/', (req, res) => {
             req.session.age1 = rows[0].User_age;
             req.session.phone1=rows[0].User_phone;
            
-            req. session.img = "<img src='/static/image/"+req.session.mbti1+".jpg'>";
-        res.render('profile2',{img : req.session.img, name1:req.session.name1, mbti1:req.session.mbti1, gender1:req.session.gender1, age1:req.session.age1, phone1:req.session.phone1});
+           
+        res.render('profile2',{name1:req.session.name1, mbti1:req.session.mbti1, gender1:req.session.gender1, age1:req.session.age1, phone1:req.session.phone1});
  })}
  else if(req.session.gender==="M"){
   mdbConn.getUserMbtiM(mbti).then((rows) => {
@@ -32,8 +32,7 @@ router.post('/', (req, res) => {
         req.session.age1 = rows[0].User_age;
         req.session.phone1=rows[0].User_phone;
        
-        req. session.img = "<img src='/static/image/"+req.session.mbti1+".jpg'>";
-    res.render('profile2',{img : req.session.img, name1:req.session.name1, mbti1:req.session.mbti1, gender1:req.session.gender1, age1:req.session.age1, phone1:req.session.phone1});
+    res.render('profile2',{name1:req.session.name1, mbti1:req.session.mbti1, gender1:req.session.gender1, age1:req.session.age1, phone1:req.session.phone1});
 })}
 
  
