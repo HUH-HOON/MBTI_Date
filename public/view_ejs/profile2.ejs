@@ -38,12 +38,15 @@
                                 <article id="home" class="panel intro">
                            
                            <img src="/static/image/yyy.jpg" width="200" height="250" style="margin-top:40px; margin-left: 130px;">
-                                      <header style="font-size: 25px;"><b>MBTI : <%=mbti%> </b><br> Name : 윤아 <br> Age : 30<br>phone : 010-1234-5678</header>
+                                      <header style="font-size: 25px;"><b>MBTI : <%=mbti1%> </b><br> Name : <%=name1%> <br> Age : <%=age1%><br>phone :<%=phone1%></header>
                                 </article>
-                        <button onclick="history.go(-1)" class="homeBtn">home</button>                    
-                        </div>      
+                                <form action="/route/goMainProcess" method="post">
+                                 <button class="homeBtn">home</button> 
+                              </form>
+                                           
+                        </div>         
                 </div>
-<!-- Scripts -->
+<!-- Scripts -->  
          <script src="/static/assets/js/jquery.min.js"></script>
          <script src="/static/assets/js/browser.min.js"></script>
          <script src="/static/assets/js/breakpoints.min.js"></script>

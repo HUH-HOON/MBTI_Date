@@ -32,12 +32,32 @@
 							<article id="home" class="panel intro">
                                <header>
                                     <center>    
-                                        <b><%= name %></b>님에게 가장 잘 어울리는 상대의 MBTI는 <%= mbti %>입니다. <br>소개 받으시겠습니까?<br><br>
+                                        <b><%= name %></b>님에게 가장 잘 어울리는 상대의 MBTI는 
+										<% if (mbti==="INTJ" ) { %> ENFP <% } %>
+                              <% if (mbti==="INTP" ) { %> ENTJ <% } %>
+                              <% if (mbti==="ENTJ" ) { %> INFP <% } %>
+                              <% if (mbti==="ENTP" ) { %> INFJ <% } %>
+                              
+                              <% if (mbti==="INFJ" ) { %> ENFP <% } %>
+                              <% if (mbti==="INFP" ) { %> ENFJ <% } %>
+                              <% if (mbti==="ENFJ" ) { %> INFP <% } %>
+                              <% if (mbti==="ENFP" ) { %> INFJ <% } %>
+
+                              <% if (mbti==="ISTJ" ) { %> ESFP <% } %>
+                              <% if (mbti==="ISFJ" ) { %> ESFP <% } %>
+                              <% if (mbti==="ESTJ" ) { %> INTP <% } %>
+                              <% if (mbti==="ESFJ" ) { %> ISFP <% } %>
+
+                              <% if (mbti==="ISTP" ) { %> ESFJ <% } %>
+                              <% if (mbti==="ISFP" ) { %> ENFJ <% } %>
+                              <% if (mbti==="ESTP" ) { %> ISFJ <% } %>
+                              <% if (mbti==="ESFP" ) { %> ISFJ <% } %>
+							  입니다. <br>소개 받으시겠습니까?<br><br>
                                         <form action="/route/profile1Process" method="post">
 											<td>
-												<button class="answer" id="nn">yes</button>
-											</td></form>
-                                        <button class="answer" onclick="location.href='http://127.0.0.1:3000/static/html/dating-2.html'">NO</button>
+												<button class="answer" id="nn">YES</button>
+											</td></form><form action ="/static/html/dating-2.html"><td>
+                                        <button class="answer">NO</button></td></form>
                                     </center>
                                 </header>
 							</article>

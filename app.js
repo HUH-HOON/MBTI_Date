@@ -8,6 +8,8 @@ const dotenv = require('dotenv');
 const path = require('path');
 
 dotenv.config();
+const goMainRouter = require('./route/goMain');
+const goMainProcessRouter = require('./route/goMainProcess');
 const profile2Router = require('./route/profile2');
 const profile2ProcessRouter = require('./route/profile2Process');
 const dateMainRouter = require('./route/dateMain');
@@ -43,6 +45,8 @@ app.use(session({
   name: 'session-cookie',
 }));
 
+app.use('/route/goMain', goMainRouter);
+app.use('/route/goMainProcess',goMainProcessRouter);
 app.use('/route/dateMain', dateMainRouter);
 app.use('/route/dateMainProcess', dateMainProcessRouter);
 app.use('/route/login', loginRouter);

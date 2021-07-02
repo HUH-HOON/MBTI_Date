@@ -30,12 +30,12 @@
                 background: none;
                 border-radius: 10px;
                 border-style: none;
-                width: 140px;
+                width: 130px;
                 height: initial;
-                font-size: 23px;
+                font-size: 20px;
                 color: #E5AE9D;
-                margin-left: 270px;
-                margin-top : 50px;
+                margin-left: 160px;
+                padding-top : 20px;
                 font-family: Hanna;
                 
             }
@@ -45,11 +45,11 @@
                 background: none;
                 border-radius: 10px;
                 border-style: none;
-                width: 150px;
+                width: 130px;
                 height: initial;
                 color: #E5AE9D;
-
-                font-size: 23px;
+                padding-top : 20px;
+                font-size: 20px;
                 font-family: Hanna;
             }
 
@@ -82,6 +82,10 @@
                 color: white;
                 transform: scale(1.1) rotate(.001deg);
             }
+
+            #home {
+                margin-top: 0px;
+            }
         </style>
     </head>
 
@@ -106,19 +110,19 @@
 
             <!-- Main -->
             <div id="main">
+
                 <!-- Me -->
                 <article id="home" class="panel intro">
                     <header>
                         <br>
                         <center><img src="/static/image/minii.png">MBTI를 통해 나에게 꼭 맞는 연인을 찾아보세요<img src="/static/image/minii.png">
                         </center><br>
-                        <form action="/route/loginProcess" method = "post">
-                            ID&nbsp;&nbsp;&nbsp;<input name="id" type="text" class="aa" required>
-                            PASSWORD <input name="pw" type="password" class="aa" required><br>
-                        
-                        <button class="btn" >log in</button>
-                       
-                    </form> <button class="btn1" onclick="location.href='static/html/SignUp.html'">sign up</button>
+                        <form action="/route/loginProcess" method="post">
+                            ID<input name="id" type="text" class="aa" required>
+                            PASSWORD <input name="pw" type="password" class="aa" required><br><br>                            
+                            <button class="btn">log in</button>
+                            <button class="btn1" onclick="location.href='static/html/SignUp.html'">sign up</button>
+                        </form> 
                     </header>
                     <a href="#" class="jumplink pic">
                         <img src="/static/image/dating.jpg" alt="" style="width: 440px;height: auto;" />
