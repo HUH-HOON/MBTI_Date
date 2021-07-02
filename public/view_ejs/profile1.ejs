@@ -35,9 +35,9 @@
                             <!-- Me --><h3>Profile</h3>
                                 <article id="home" class="panel intro">
 									
-									<img src="/static/image/tiffany.jpg" width="200" height="250" style="margin-top:40px; margin-left: 130px;">
-                                      <header style="font-size: 25px;"><b>MBTI : <p id="aa"><%=a %></p></b><br> Name : 티파니 <br> Age : 31<br>phone : 010-1234-5678</header>
-                                </article>
+									<img src='/static/image/<%=mbti2%>.jpg' width="200" height="250" style="margin-top:40px; margin-left: 130px;">
+                                      <header style="font-size: 25px;"><b>MBTI : <%= mbti2 %></b><br> Name : <%= name2 %> <br> Age : <%= age2 %><br>phone :<%=phone2%></header>
+                                </article> 
 								<form action="/route/goMainProcess" method="post">
 									<button class="homeBtn">home</button> 
 								 </form>

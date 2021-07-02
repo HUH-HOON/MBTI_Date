@@ -45,10 +45,29 @@
 						<!-- Me -->
 							<article id="home" class="panel intro" style="font-size:20px;">
 								<header><form action="/route/profile2Process" method="POST">
-									<center>원하는 상대의 <b>"MBTI"</b>를 입력해주세요 </center><br>
-										<center><input type="text" class="txtbox" name="own_mbti" autofocus>
-											
-											<button class="btn">확인</button></center></form>
+									<center>원하는 상대의 <b>"MBTI"</b>를 선택해주세요 </center><br>
+										<center> <span class="box gender_code" >
+											<select name="own_mbti" class="sel" style="width: 250px;">
+												<option>MBTI선택</option>
+												<option value="INTJ" name="INTJ">INTJ</option>
+												<option value="INTP" name="INTP">INTP</option>
+												<option value="ENTJ" name="ENTJ">ENTJ</option>
+												<option value="ENTP" name="ENTP">ENTP</option>
+												<option value="INFJ" name="INFJ">INFJ</option>
+												<option value="INFP" name="INFP">INFP</option>
+												<option value="ENFJ" name="ENFJ">ENFJ</option>
+												<option value="ENFP" name="ENFP">ENFP</option>
+												<option value="ISTJ" name="ISTJ">ISTJ</option>
+												<option value="ISFJ" name="ISFJ">ISFJ</option>
+												<option value="ESTJ" name="ESTJ">ESTJ</option>
+												<option value="ESFJ" name="ESFJ">ESFJ</option>
+												<option value="ISTP" name="ISTP">ISTP</option>
+												<option value="ISFP" name="ISFP">ISFP</option>
+												<option value="ESTP" name="ESTP">ESTP</option>
+												<option value="ESFP" name="ESFP">ESFP</option>
+											</select>                            
+										</span>
+										<button class="btn">확인</button></center></form>
 								</header>
 							</article>
                     </div>      

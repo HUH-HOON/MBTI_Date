@@ -1,74 +1,77 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Yeon+Sung&display=swap" rel="stylesheet">
-		<title>Find your date with MBTI</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="/static/assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="/static/assets/css/noscript.css" /></noscript>
-	</head>
-	<style>
-		#nn{font-family: 'Do Hyeon', sans-serif;font-family: 'Yeon Sung', cursive;}
-		.answer{
-			background: none;
-			background-color: none;
-			color: #E5AE9D;
-			font-size: large;
-		}
-		.answer:hover{
-			
-			background-color: #E5AE9D;
-			color: white;
-			}
-	</style>
-	<body class="is-preload" id="nn">
-
-		<!-- Wrapper-->
-			<div id="wrapper">
-				<!-- Main -->
-					<div id="main">
-						<!-- Me -->
-							<article id="home" class="panel intro">
-                               <header>
-                                    <center>    
-                                        <b><%= name %></b>님에게 가장 잘 어울리는 상대의 MBTI는 
-										<% if (mbti==="INTJ" ) { %> ENFP <% } %>
-                              <% if (mbti==="INTP" ) { %> ENTJ <% } %>
-                              <% if (mbti==="ENTJ" ) { %> INFP <% } %>
-                              <% if (mbti==="ENTP" ) { %> INFJ <% } %>
-                              
-                              <% if (mbti==="INFJ" ) { %> ENFP <% } %>
-                              <% if (mbti==="INFP" ) { %> ENFJ <% } %>
-                              <% if (mbti==="ENFJ" ) { %> INFP <% } %>
-                              <% if (mbti==="ENFP" ) { %> INFJ <% } %>
-
-                              <% if (mbti==="ISTJ" ) { %> ESFP <% } %>
-                              <% if (mbti==="ISFJ" ) { %> ESFP <% } %>
-                              <% if (mbti==="ESTJ" ) { %> INTP <% } %>
-                              <% if (mbti==="ESFJ" ) { %> ISFP <% } %>
-
-                              <% if (mbti==="ISTP" ) { %> ESFJ <% } %>
-                              <% if (mbti==="ISFP" ) { %> ENFJ <% } %>
-                              <% if (mbti==="ESTP" ) { %> ISFJ <% } %>
-                              <% if (mbti==="ESFP" ) { %> ISFJ <% } %>
-							  입니다. <br>소개 받으시겠습니까?<br><br>
-                                        <form action="/route/profile1Process" method="post">
-											<td>
-												<button class="answer" id="nn">YES</button>
-											</td></form><form action ="/static/html/dating-2.html"><td>
-                                        <button class="answer">NO</button></td></form>
-                                    </center>
-                                </header>
-							</article>
-                    </div>      
-            </div>
-<!-- Scripts -->
-			<script src="/static/assets/js/jquery.min.js"></script>
-			<script src="/static/assets/js/browser.min.js"></script>
-			<script src="/static/assets/js/breakpoints.min.js"></script>
-			<script src="/static/assets/js/util.js"></script>
-			<script src="/static/assets/js/main.js"></script>
+   <head>
+      <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Yeon+Sung&display=swap" rel="stylesheet">
+      <title>Find your date with MBTI</title>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+      <link rel="stylesheet" href="/static/assets/css/main.css" />
+      <noscript><link rel="stylesheet" href="/static/assets/css/noscript.css" /></noscript>
+   </head>
+   <style>
+      #nn{font-family: 'Do Hyeon', sans-serif;font-family: 'Yeon Sung', cursive;}
+      .answer{
+         background: none;
+         background-color: none;
+         color: #E5AE9D;
+         font-size: xx-large;
+         margin-left: 130px;
          
-	</body>
+      }
+      .answer:hover{
+         
+         background-color: #E5AE9D;
+         color: white;
+         }
+   </style>
+   <body class="is-preload" id="nn">
+
+      <!-- Wrapper-->
+         <div id="wrapper">
+            <!-- Main -->
+               <div id="main">
+                  <!-- Me -->
+                  <article id="home" class="panel intro">
+                     <header>
+                         <center>    
+                            <b><%= name %></b>님에게 가장 잘 어울리는 상대의 MBTI는 
+                     <% if (mbti==="INTJ" ) { %> ENFP <% } %>
+                     <% if (mbti==="INTP" ) { %> ENTJ <% } %>
+                     <% if (mbti==="ENTJ" ) { %> INFP <% } %>
+                     <% if (mbti==="ENTP" ) { %> INFJ <% } %>
+                     
+                     <% if (mbti==="INFJ" ) { %> ENFP <% } %>
+                     <% if (mbti==="INFP" ) { %> ENFJ <% } %>
+                     <% if (mbti==="ENFJ" ) { %> INFP <% } %>
+                     <% if (mbti==="ENFP" ) { %> INFJ <% } %>
+
+                     <% if (mbti==="ISTJ" ) { %> ESFP <% } %>
+                     <% if (mbti==="ISFJ" ) { %> ESFP <% } %>
+                     <% if (mbti==="ESTJ" ) { %> INTP <% } %>
+                     <% if (mbti==="ESFJ" ) { %> ISFP <% } %>
+
+                     <% if (mbti==="ISTP" ) { %> ESFJ <% } %>
+                     <% if (mbti==="ISFP" ) { %> ENFJ <% } %>
+                     <% if (mbti==="ESTP" ) { %> ISFJ <% } %>
+                     <% if (mbti==="ESFP" ) { %> ISFJ <% } %>
+               입니다. <br>소개 받으시겠습니까?<br><br>
+               <table><center>
+                            <form action="/route/profile1Process" method="post">
+                       <td>
+                         <button class="answer" id="nn">YES</button>
+                       </td></form><form action ="/static/html/dating-2.html"><td>
+                            <button class="answer" id="nn">NO</button></td></form></center></table>
+                         </center>
+                      </header>
+              </article>
+             </div>      
+       </div>
+<!-- Scripts -->
+         <script src="/static/assets/js/jquery.min.js"></script>
+         <script src="/static/assets/js/browser.min.js"></script>
+         <script src="/static/assets/js/breakpoints.min.js"></script>
+         <script src="/static/assets/js/util.js"></script>
+         <script src="/static/assets/js/main.js"></script>
+         
+   </body>
 </html>

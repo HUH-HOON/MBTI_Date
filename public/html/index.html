@@ -20,7 +20,7 @@
                 background-color: #E7E7E7;
                 border-style: none;
                 border-radius: 20px;
-                width: 200px;
+                width: 300px;
                 height: 50px;
                 outline: none;
             }
@@ -116,20 +116,21 @@
                     <header>
                         <br>
                         <center><img src="/static/image/minii.png">MBTI를 통해 나에게 꼭 맞는 연인을 찾아보세요<img src="/static/image/minii.png">
-                        </center><br>
+                        </center><br><table>
                         <form action="/route/loginProcess" method="post">
-                            ID<input name="id" type="text" class="aa" required>
-                            PASSWORD <input name="pw" type="password" class="aa" required><br><br>                            
-                            <button class="btn">log in</button>
-                            <button class="btn1" onclick="location.href='static/html/SignUp.html'">sign up</button>
+                            <tr>
+                            ID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input name="id" type="text" class="aa" required></tr><br><br>
+                            <tr>
+                            PASSWORD &nbsp;&nbsp;&nbsp;<input name="pw" type="password" class="aa" required><br><br></tr>
+                            <td><button class="btn">log in</button></td>
                         </form> 
+                        <td><button class="btn1" onclick="location.href='static/html/SignUp.html'">sign up</button></td>
+                    </table>
                     </header>
                     <a href="#" class="jumplink pic">
                         <img src="/static/image/dating.jpg" alt="" style="width: 440px;height: auto;" />
                     </a>
                 </article>
-
-
 
                 <!-- Work -->
                 <article id="work" class="panel">

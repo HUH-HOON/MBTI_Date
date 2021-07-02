@@ -51,13 +51,13 @@ async function GetUserList(){
                         return rows; 
                     } 
                 }     
-                async function GetUserMbti(Mbti){ 
+                async function GetUserMbtiF(Mbti){ 
                     let conn, rows; 
                     try{ 
                         conn = await pool.getConnection(); 
                         conn.query('USE date_user'); 
                         console.log("userid ", Mbti);
-                        rows = await conn.query(` SELECT * FROM user where User_mbti='${Mbti}' order by rand() LIMIT 1`);
+                        rows = await conn.query(` SELECT * FROM user where User_mbti='${Mbti}' and User_gender="M" order by rand() LIMIT 1`);
             
                     } catch(err){ 
                         throw err; 
@@ -67,7 +67,23 @@ async function GetUserList(){
                             return rows; 
                         } 
                     }
-        module.exports = { getUserList: GetUserList,  getUser:GetUser ,  addUser:addUser ,getUserMbti:GetUserMbti } 
+                    async function GetUserMbtiM(Mbti){ 
+                        let conn, rows; 
+                        try{ 
+                            conn = await pool.getConnection(); 
+                            conn.query('USE date_user'); 
+                            console.log("userid ", Mbti);
+                            rows = await conn.query(` SELECT * FROM user where User_mbti='${Mbti}' and User_gender="F" order by rand() LIMIT 1`);
+                
+                        } catch(err){ 
+                            throw err; 
+                        } finally{  
+                            if (conn) 
+                                conn.end(); 
+                                return rows; 
+                            } 
+                        }
+        module.exports = { getUserList: GetUserList,  getUser:GetUser ,  addUser:addUser ,getUserMbtiF:GetUserMbtiF, getUserMbtiM:GetUserMbtiM } 
         //다른 파일에서 GetUserList 를  getUserList로 불러서 쓸수 있음 
     
        
